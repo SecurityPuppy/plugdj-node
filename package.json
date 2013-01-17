@@ -1,0 +1,20 @@
+{
+    "name": "plugdj-node",
+    "version": "0.1.0",
+    "author": "Thomas 'TAT' Andresen <TAT@earthgame.dk>",
+    "description": "Node.JS library for writing code that connects with plug.dj",
+    "main": "./src/plugdj-node.js",
+    "dependencies": {
+        "sockJS": "https://github.com/sockjs/sockjs-client-node/tarball/master",
+        "node-uuid": "*",
+        "node-html-encoder": "*"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/TATDK/plugdj-node.git"
+    },
+    "license": "custom",
+    "engines": {
+        "node": ">=0.6"
+    }
+}
