@@ -5,7 +5,7 @@
     "description": "Node.JS library for writing code that connects with plug.dj",
     "main": "./src/plugdj-node.js",
     "dependencies": {
-        "sockJS": "https://github.com/sockjs/sockjs-client-node/tarball/master",
+        "sockjs-client-node": "https://github.com/TATDK/sockjs-client-node/tarball/master",
         "node-uuid": "*",
         "node-html-encoder": "*"
     },
