@@ -299,8 +299,8 @@ var plugdjNode = function(data) {
                 if (this.data.djs) {
                     var b = this.data.djs.length;
                     for (var c = 0;c < b;++c) {
-                        if (this.userHash[this.data.djs[i].id]) a.push(this.userHash[this.data.djs[i].id]);
-                        else console.error("getDJs Error :: " + this.data.djs[i].id + " does not exist in room users");
+                        if (this.userHash[this.data.djs[c].id]) a.push(this.userHash[this.data.djs[c].id]);
+                        else console.error("getDJs Error :: " + this.data.djs[c].id + " does not exist in room users");
                     }
                 }
                 return a;
@@ -329,10 +329,10 @@ var plugdjNode = function(data) {
                 var result = [];
                 if (this.data.waitList) {
                     var len = this.data.waitList.length;
-                    for (var i = 0; i < len; ++i) {
-                        if (!this.userHash[this.data.waitList[i].id])
-                            this.userJoin(this.data.waitList[i])
-                        result.push(this.userHash[this.data.waitList[i].id]);
+                    for (var a = 0;a < len;++a) {
+                        if (!this.userHash[this.data.waitList[a].id])
+                            this.userJoin(this.data.waitList[a])
+                        result.push(this.userHash[this.data.waitList[a].id]);
                     }
                 }
                 return result;
