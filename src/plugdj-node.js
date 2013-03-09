@@ -14,17 +14,17 @@
  */
 
  var Encoder      = require('node-html-encoder').Encoder,
-    EventEmitter = require('events').EventEmitter,
-    util         = require('util'),
-    http         = require('http'),
-    SockJS       = require('sockjs-client'),
-    encoder      = new Encoder('entity'),
-    apiId        = 0,
-    client       = null;
+     EventEmitter = require('events').EventEmitter,
+     util         = require('util'),
+     http         = require('http'),
+     SockJS       = require('sockjs-client'),
+     encoder      = new Encoder('entity'),
+     apiId        = 0,
+     client       = null;
 
 http.OutgoingMessage.prototype.__renderHeaders = http.OutgoingMessage.prototype._renderHeaders;
 
-var plugdjNode = function(data) {
+var PlugDJNode = function(data) {
     this.DISCONNECTED  = 0;
     this.CONNECTING    = 1;
     this.CONNECTED     = 2;
@@ -648,5 +648,5 @@ var FakeAPI = function(bot) {
     };
 };
 
-exports.plugdjNode = plugdjNode;
-exports.fakeAPI = fakeAPI;
+exports.PlugDJNode = PlugDJNode;
+exports.FakeAPI = FakeAPI;
