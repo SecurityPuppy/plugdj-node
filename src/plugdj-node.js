@@ -581,10 +581,10 @@ var PlugDJNode = function(data) {
     this.banUser        = function(userid, reason)     { if (userid === Models.user.data.id) return null; return this.sendRPC("moderate.kick",[userid,reason,-1]); };
 };
 
-util.inherits(plugdjNode,EventEmitter);
+util.inherits(PlugDJNode,EventEmitter);
 
 var FakeAPI = function(bot) {
-    if (!bot instanceof plugdjNode)
+    if (!bot instanceof PlugDJNode)
         throw new Error('You tried to make a FakeAPI for other than plugdj-node');
 
     this.__events            = {};
