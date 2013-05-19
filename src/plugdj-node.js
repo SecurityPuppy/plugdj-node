@@ -240,12 +240,14 @@ var PlugDJNode = function(data) {
                 this.joinTime = Date.now();
                 this.data = a;
                 var b = false;
-                for (var a = this.data.users.length; a--;) {
-                    this.data.users[a].owner = this.data.users[a].id == this.data.owner;
-                    this.data.users[a].permission = this.data.staff[this.data.users[a].id] ? this.data.staff[this.data.users[a].id] : 0;
-                    this.userHash[this.data.users[a].id] = this.data.users[a];
-                    if (this.data.users[a].id == Models.user.data.id)
-                        b = true;
+                if (this.data !== undefined) {
+                    for (var a = this.data.users.length; a--;) {
+                        this.data.users[a].owner = this.data.users[a].id == this.data.owner;
+                        this.data.users[a].permission = this.data.staff[this.data.users[a].id] ? this.data.staff[this.data.users[a].id] : 0;
+                        this.userHash[this.data.users[a].id] = this.data.users[a];
+                        if (this.data.users[a].id == Models.user.data.id)
+                            b = true;
+                    }
                 }
                 if (!b) {
                     Models.user.data.owner = Models.user.data.id == this.data.owner;
